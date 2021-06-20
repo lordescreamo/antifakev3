@@ -6,9 +6,11 @@ $ termux-setup-storage
 
 $ apt upgrade
 
-$ cp  -r /sdcard/download/lordescreamov3 /data/data/com.termux/files/home
+$ pkg install git
 
-$ cd lordescreamov3
+$ git clone https://github.com/lordescreamo/antifakev3
+
+$ cd antifakev3
 
 $ bash install.sh
 
