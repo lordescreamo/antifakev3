@@ -973,7 +973,40 @@ case 'level':
                     console.error(err)
                     await reply(`Error!\n${err}`)
                     })
-                    break
+                    break. 
+		    case 'antispam':
+
+					if (!isGroup) return reply(mess.only.group)
+
+					if (!isGroupAdmins) return reply(mess.only.admin)
+
+					if (args.length < 1) return reply('Hmmmm')
+
+					if ((args[0]) === 'on') {
+
+						if (isAntiRacismo) return reply('O modo antispam já está ativo')
+
+						antiracismo.push(from)
+
+						fs.writeFileSync('./database/json/antiracismo.json', JSON.stringify(antiracismo))
+
+						reply(`\`\`\`✓Ativado com sucesso o modo antispam no grupo\`\`\` *${groupMetadata.subject}*`)
+
+					} else if ((args[0]) === 'off') {
+
+						antiracismo.splice(from, 1)
+
+						fs.writeFileSync('./database/json/antiracismo.json', JSON.stringify(antiracismo))
+
+						reply(`\`\`\`✓Modo antispam desativado com sucesso no grupo\`\`\` *${groupMetadata.subject}*`)
+
+					} else {
+
+						reply('On para ativar, Off para desligar')
+
+					}
+
+					break
                 case 'leveling':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
