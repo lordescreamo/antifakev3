@@ -973,7 +973,7 @@ case 'level':
                     console.error(err)
                     await reply(`Error!\n${err}`)
                     })
-                    break. 
+                    break
 		    case 'antispam':
 
 					if (!isGroup) return reply(mess.only.group)
