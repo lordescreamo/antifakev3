@@ -37,9 +37,9 @@ const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const setting = JSON.parse(fs.readFileSync('./src/settings.json'))
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:meu criador\n' // Seu nome
-            + 'ORG:Private ofc;\n' // Nome do bot
-            + 'TEL;type=CELL;type=VOICE;waid=552798522393:+55 27 9852-2393\n' //Seu número Whatsapp
+            + 'FN:meu criador\n' // Loserzinn
+            + 'ORG:Private ofc;\n' // Rias gremory
+            + 'TEL;type=CELL;type=VOICE;waid=5521973747709:+15874151789\n' //Seu número Whatsapp
             + 'END:VCARD'
 prefix = setting.prefix
 blocked = []
@@ -197,7 +197,7 @@ async function starts() {
 			if (anu.action == 'add'){
 				num = anu.participants[0]
 				if(!num.split('@')[0].startsWith(55)) {
-					client.sendMessage(mdata.id, ' ⚠️numeros estrangeiros não sao Permitidos neste grupo, consulte um Administrador⚠️', MessageType.text)
+					client.sendMessage(mdata.id, ' ara ara bobinho não pode numero fake aqui não🍭🌸', MessageType.text)
 					setTimeout(async function () {
 						client.groupRemove(mdata.id, [num])
 					}, 1000)
@@ -215,7 +215,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `𝐎𝐩𝐚 @${num.split('@')[0]}\n𝐁𝐞𝐦 𝐯𝐢𝐧𝐝𝐨 𝐚𝐨 𝐠𝐫𝐮𝐩𝐨 *${mdata.subject}*\n\n𝐥𝐞𝐢𝐚 𝐚𝐬 𝐫𝐞𝐠𝐫𝐚𝐬 𝐝𝐨 𝐠𝐫𝐮𝐩𝐨 𝐩𝐚𝐫𝐚 𝐧𝐚𝐨 𝐬𝐞𝐫 𝐛𝐚𝐧𝐢𝐝𝐨❤️`
+				teks = `oiiiii @${num.split('@')[0]}\n𝐁𝐞𝐦 𝐯𝐢𝐧𝐝𝐨 𝐚𝐨 clã *${mdata.subject}*\n\n𝐥𝐞𝐢𝐚 𝐚𝐬 𝐫𝐞𝐠𝐫𝐚𝐬 𝐝𝐨 𝐠𝐫𝐮𝐩𝐨 𝐩𝐚𝐫𝐚 𝐧𝐚𝐨 𝐬𝐞𝐫 𝐛𝐚𝐧𝐢𝐝𝐨❤️`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -233,7 +233,7 @@ async function starts() {
     •            @${num.split('@')[0]}was E j e c t e d
                       1 impostor restante   。　.
     　 　　。　　 　　　　ﾟ　　　.　      　　
-𝐀𝐯𝐢𝐬𝐨 𝐩𝐚𝐫𝐚 𝐯𝐨𝐜𝐞 𝐪𝐮𝐞 𝐬𝐚𝐢𝐮 @${num.split('@')[0]} 𝐁𝐨𝐢 𝐛𝐨𝐢 𝐛𝐨𝐢,𝐛𝐨𝐢 𝐝𝐚 𝐜𝐚𝐫𝐚 𝐩𝐫𝐞𝐭𝐚 𝐪𝐮𝐞𝐦 𝐬𝐚𝐢𝐮 𝐝𝐨 𝐠𝐫𝐮𝐩𝐨 𝐦𝐚𝐦𝐚 𝐚 𝐩𝐢𝐤𝐚 𝐝𝐨 𝐜𝐚𝐩𝐞𝐭𝐚😂👋`
+𝐀𝐯𝐢𝐬𝐨 𝐩𝐚𝐫𝐚 𝐯𝐨𝐜𝐞 𝐪𝐮𝐞 𝐬𝐚𝐢𝐮 @${num.split('@')[0]} sayonara senpai🌸🍭`
 				        
     
 				let buff = await getBuffer(ppimg)
@@ -286,19 +286,19 @@ async function starts() {
 				only: {
 					group: '❌ Este comando só pode ser usado em grupos! ❌',
 					premium: '[❗] ESTE PEDIDO É SO PARA *USUÁRIOS PREMIUMS*',
-					ownerG: '❌ Este comando só pode ser usado pelo dono! ❌',
-					ownerB: '❌ Este comando só pode ser usado pelo meu dono! ❌',
-					admin: '❌ Este comando só pode ser usado por administradores de grupo! ❌',
-					Badmin: '❌ Este comando só pode ser usado quando o bot se torna administrador! ❌'
+					ownerG: '❌ Este comando só pode ser usado pelo @loserzinn! ❌',
+					ownerB: '❌ Este comando só pode ser usado pelo @loserzinn! ❌',
+					admin: '❌ somente adm! ❌',
+					Badmin: '❌ não sou adm! ❌'
 				}
 			}
 
 			const botNumber = client.user.jid
 			const ownerNumber = [`${setting.ownerNumber}@s.whatsapp.net`] // substitua isso pelo seu número
-            const mod = [ownerNumber,"${setting.mod}@s.whatsapp.net"]//mude o seu numero
-            const adminbotnumber = ["${setting.adminbotnumber}@s.whatsapp.net"]//mude o seu numero
-			const frendsowner = ["${setting.frendsowner}@s.whatsapp.net"]//mude o seu numero
-            const premium = ["552798522393@s.whatsapp.net","${setting.vip2}@s.whatsapp.net","${setting.vip3}@s.whatsapp.net","${setting.vip4}@s.whatsapp.net","${setting.vip5}@s.whatsapp.net","${setting.vip6}@s.whatsapp.net","${setting.vip7}@s.whatsapp.net","${setting.vip8}@s.whatsapp.net","${setting.vip9}@s.whatsapp.net","${setting.vip10}@s.whatsapp.net",]
+            const mod = [ownerNumber,"${setting.mod}@s.whatsapp.net"]//+5521973747709
+            const adminbotnumber = ["${setting.adminbotnumber}@s.whatsapp.net"]//+5521973747709
+			const frendsowner = ["${setting.frendsowner}@s.whatsapp.net"]//+5521973747709
+            const premium = ["55219737477@s.whatsapp.net","${setting.vip2}@s.whatsapp.net","${setting.vip3}@s.whatsapp.net","${setting.vip4}@s.whatsapp.net","${setting.vip5}@s.whatsapp.net","${setting.vip6}@s.whatsapp.net","${setting.vip7}@s.whatsapp.net","${setting.vip8}@s.whatsapp.net","${setting.vip9}@s.whatsapp.net","${setting.vip10}@s.whatsapp.net",]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const isPremium = premium.includes(sender)
@@ -663,10 +663,10 @@ async function starts() {
         if (budy.includes("🤑🤑🤑")){
 		if (!isGroup) return
 		if (!isAntiRacismo) return
-		if (isGroupAdmins) return reply('cara, nao poste essas coisas, é errado, mas vc e admin n irei te banir')
+		if (isGroupAdmins) return reply('cara, nao poste essas coisas, é errado, na proxima vc vai de ban')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`tchau racista ${sender.split("@")[0]} voce sera expulso deste grupo em 5 segundos`)
+		reply(`${sender.split("@")[0]}`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
@@ -770,7 +770,7 @@ async function starts() {
 		}, 0)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
-			reply("vai postar kwaii na casa do caralho seu mendigo")
+			reply("vai postar kwaii em outro lugar aqui não")
 		}, 0)
 	}
 	
@@ -880,7 +880,7 @@ if (args[0] === '1') {
 	fs.writeFileSync('./src/antimedia.json', JSON.stringify(antimedia))       
 	reply(`Desactivado`)              
 } else {                                         
-	reply('1 para activar, 0 para desactivar')           
+	reply('1 para activar, 0 para desativar')           
 }           
 break
 case 'autostick':            
